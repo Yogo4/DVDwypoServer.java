@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableColumn?>
+
+<?import javafx.scene.control.TableView?>
+
+<AnchorPane fx:id="ap_main" fx:controller="com.example.dvdwyposerver.Controller" prefHeight="900" prefWidth="900" xmlns:fx="http://javafx.com/fxml">
+   <children>
+    <TableView fx:id="dvdTable" layoutY="14.0" prefHeight="500.0" prefWidth="900.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="tytul" text="Tytul" prefWidth="128"/>
+            <TableColumn fx:id="rezyser" text="Rezyser" prefWidth="128"/>
+            <TableColumn fx:id="id_zamowienia" text="ID_Zamowienia" prefWidth="128"/>
+            <TableColumn fx:id="imie" text="Imie" prefWidth="128"/>
+            <TableColumn fx:id="nazwisko" text="Nazwisko" prefWidth="128"/>
+            <TableColumn fx:id="stan" text="Stan" prefWidth="128"/>
+        </columns>
+    </TableView>
+    <TextField fx:id="id_issue" layoutX="14.0" layoutY="554.0" promptText="id zamowienia" />
+    <Button fx:id="issueButton" layoutX="14.0" layoutY="584.0" text="wydaj DVD" onAction="#handleIssueDVD" />
+    <Button fx:id="returnButton" layoutX="14.0" layoutY="614.0" text="zwrot DVD" onAction="#handleReturnDVD" />
+   </children>
+</AnchorPane>
